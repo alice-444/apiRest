@@ -5,14 +5,14 @@ const router = express.Router();
 const voteController = require("../controller/voteController.js")
 
 router
-    .route('/')
-    //.get(votesController.listAllVotes)
-    //.post(votesController.createPVote)
+    .route('/musics/:id_music/votes')
+    .get(voteController.listAllVotes)
+    .post(voteController.createPVote)
 
 router
-    .route('/')
-    //.get(votesController.getVote)
-    //.put(votesController.updateVote)
-    //.delete(votesController.deleteVote)
+    .route('/votes/:id_vote')
+    .get(voteController.getVote)
+    .put(voteController.updateVote)
+    .delete(voteController.deleteVote)
 
 module.exports = router

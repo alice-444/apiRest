@@ -10,7 +10,7 @@ router
     .post(musicController.createMusic)
 
 router
-    .route('')
+    .route('//:id_music')
     .get(musicController.getMusic)
     .put(musicController.updateMusic)
     .delete(musicController.deleteMusic)
